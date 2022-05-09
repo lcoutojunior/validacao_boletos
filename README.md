@@ -14,7 +14,9 @@ PORT=8080
 ```
 npm i
 ```
-
+```
+Adicione no seu Postman a Collection que está na pasta **./resources**. Observe os exemplos de respostas já inclusos.
+```
 ## Usage/Examples
 Start project:
 ```
