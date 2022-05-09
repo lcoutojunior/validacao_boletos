@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "410b0b2c-8640-488a-b87c-f1a1d1655d46",
+		"name": "validacao_boleto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Validar Boleto",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Sucesso Bancario",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/boleto/21290001192110001210904475617405975870000002000",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boleto",
+								"21290001192110001210904475617405975870000002000"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"69-v/QsMDhP9aKMKSfk9H40P7ks3Bc\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 May 2022 00:33:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"barCode\": \"21299758700000020000001121100012100447561740\",\n    \"amount\": \"20.00\",\n    \"expirationDate\": \"2018-07-16\"\n}"
+				},
+				{
+					"name": "Sucesso Convenio",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/boleto/846500000001499901090112004661546541400633093986",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boleto",
+								"846500000001499901090112004661546541400633093986"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "75"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4b-871/v4tsNvelSgeRQewa1BPP9Yw\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 May 2022 00:33:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"barCode\": \"84650000000499901090110046615465440063309398\",\n    \"amount\": \"49.99\"\n}"
+				},
+				{
+					"name": "Linha Invalida",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/boleto/846500000001499901090112004661546541400633093986A",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boleto",
+								"846500000001499901090112004661546541400633093986A"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-zIZ4tIf5gfIHUCJd5K3YtA7hsc4\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 May 2022 00:34:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"linha digitavel invalida\""
+				}
+			]
+		}
+	]
+}
