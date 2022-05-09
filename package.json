@@ -1,0 +1,36 @@
+{
+  "name": "validador_boleto",
+  "version": "1.0.0",
+  "description": "API para validação de boleto.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./src/server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcoutojunior/validador_boleto.git"
+  },
+  "keywords": [
+    "validador_boleto",
+    "boleto",
+    "nodejs",
+    "javascript",
+    "expressjs"
+  ],
+  "author": "Luiz Meirelles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lcoutojunior/validador_boleto/issues"
+  },
+  "homepage": "https://github.com/lcoutojunior/validador_boleto#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
